@@ -57,6 +57,10 @@ $("#add-train").on("click", function(event) {
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     // console.log(childSnapshot.val());
 
+
+// $("#train-schedule").empty();
+
+
     //Store this data into a variable to re-use
     var trainName = childSnapshot.val().name;
     var destination = childSnapshot.val().where;
