@@ -1,0 +1,18 @@
+body {
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+#trains, #train-schedule {
+    color: black;
+    background-color: #ffffff;
+}
+
+#train-schedule {
+    color: black;
+    background-color: #ffffff;
+}
+
+h3 {
+    background-color: #30A64A;
+}

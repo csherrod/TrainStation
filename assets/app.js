@@ -24,6 +24,7 @@ $("#add-train").on("click", function(event) {
     var trainName = $("#train-name").val().trim();
     var destination = $("#destination").val().trim();
     var firstTrain = moment($("#time").val().trim(), "hh:mm").format("X");
+    console.log(firstTrain);
     var frequency = $("#frequency").val().trim();
 
 
@@ -63,11 +64,18 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     var frequency = childSnapshot.val().regularity;
 
 //Need lots of Math and more variables here to get the correct times
-var nextArrival = moment.unix(firstTrain).format("hh:mm a");
+var nextArrival = moment().diff(moment.unix(firstTrain), "minutes");
+console.log(nextArrival);
 var nextArrival2 = moment(firstTrain).add(moment(frequency, "minutes"));
 console.log(nextArrival2);
-var minAway = moment.nextArrival + moment.frequency;
+var freqRemainder = nextArrival % frequency;
+console.log(freqRemainder);
+var finalMinutes = frequency - freqRemainder;
+console.log(finalMinutes);
+var nextArrival3 = moment().add(finalMinutes, "m").format("hh:mm a");
+console.log(nextArrival3);
+var minAway;
 
 //Add each train's data into the table
-$("#train-schedule > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival2 + "</td><td>" + minAway + "</td></tr>");
+$("#train-schedule > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival3 + "</td><td>" + finalMinutes + "</td></tr>");
 });
