@@ -6,9 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" href="assets/reset.css">
 
@@ -21,9 +18,6 @@
 
     <!-- Link to Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-
-    <!-- Reverted to version 2.12 because newer version gave errors -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <title>TrainStation</title>
 </head>
@@ -39,7 +33,8 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-hover bg-light" id="train-schedule"><h3>Train Schedule</h3>
+                <table class="table table-hover bg-light" id="train-schedule">
+                    <h3>Train Schedule</h3>
                     <caption>List of Trains with destination, frequency, next arrival time and minutes away</caption>
                     <thead class="thead">
                         <tr>
@@ -87,25 +82,14 @@
         </div>
 </body>
 
-<!-- Link to Javascript Game -->
-<script src="./assets/app.js"></script>
-
-
-<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDEMSz_PNET5-13HKDZt_eMquUfxa0Li0c",
-        authDomain: "trainstation-6d9ce.firebaseapp.com",
-        databaseURL: "https://trainstation-6d9ce.firebaseio.com",
-        projectId: "trainstation-6d9ce",
-        storageBucket: "",
-        messagingSenderId: "238799817150"
-    };
-    firebase.initializeApp(config);
-</script>
 <!-- Added link to the jQuery Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Added link to the Firebase Library -->
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+<!-- Reverted to version 2.12 because newer version gave errors -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 <!--Bootstrap links -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -116,6 +100,8 @@
     crossorigin="anonymous"></script>
 <!-- Added link to the jQuery Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</body>
+
+<!-- Link to Javascript Game -->
+<script src="./assets/app.js"></script>
 
 </html>
