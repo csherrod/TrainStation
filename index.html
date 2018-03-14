@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- Link to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- Reverted to version 2.12 because newer version gave errors -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>TrainStation</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron bg-success">
+                    <h1>Train Station</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover table-responsive" id="train-schedule">Trains Baby!
+                    <caption>List of Trains with destination, frequency, next arrival time and minutes away</caption>
+                    <thead class="thead-success bg-success">
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr id="example">
+                    <th scope="row" id="employeeName">john smith</th>
+                    <td id="role">web dev</td>
+                    <td id="start">01-01-01</td>
+                    <td id="monthsWorked">200</td>
+                    <td id="monthlyRate">4k</td>
+                    <td id="totalBilled">800k</td>
+                </tr>
+                <tr id="full-member-list"></tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <div class="form-header bg-success">
+                            <h3>Add Train</h3>
+                        </div>
+                        <div class="form-header">
+                            <label for="train-name">Train Name</label>
+                            <input type="text" class="form-control" id="train-name" placeholder="ex. Reading Railroad">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" class="form-control" id="destination" placeholder="ex. Philadelphia">
+                        </div>
+                        <div class="form-group">
+                            <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                            <input type="text" class="form-control" id="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency">Frequency (min)</label>
+                            <input type="text" class="form-control" id="frequency">
+                        </div>
+                        <button type="submit" class="btn btn-dark submit-btn" id="add-train">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-- Link to Javascript Game -->
+<script src="./assets/app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDEMSz_PNET5-13HKDZt_eMquUfxa0Li0c",
+        authDomain: "trainstation-6d9ce.firebaseapp.com",
+        databaseURL: "https://trainstation-6d9ce.firebaseio.com",
+        projectId: "trainstation-6d9ce",
+        storageBucket: "",
+        messagingSenderId: "238799817150"
+    };
+    firebase.initializeApp(config);
+</script>
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Bootstrap links -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
