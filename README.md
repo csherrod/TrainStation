@@ -2,6 +2,8 @@
 
 If you want to check out a working version of this site click [here](https://csherrod.github.io/TrainStation)
 
+![Trainstation](/assets/Train-Station.png)
+
 ## Prerequisites
 
 You need to have working knowledge of HTML, CSS, Javascript, JQuery and Firebase.
